@@ -1,0 +1,85 @@
+/* COLOR PALETTE #0A1045, AFDF2C, 00C2D1, B08EA2, FAC9B8, FCEFF9 */
+
+/* .footer-top {
+  background: #0a1045;
+  height: 0rem;
+} */
+
+footer {
+  width: 100%;
+  background: url("https://images.unsplash.com/photo-1547044479-59ce6c0a784a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80")
+    center center/cover no-repeat;
+  box-shadow: 0px -2px 15px rgba(139, 156, 116, 0.473);
+}
+
+.footer-top-layer {
+  background: rgba(139, 156, 116, 0.575);
+}
+
+.footer-grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
+
+.footer-left-grid {
+  margin: 3rem 0;
+}
+
+.MARL {
+  width: 14rem;
+  margin: 0.5rem 0;
+}
+
+.NAoRL {
+  display: block;
+  width: 14rem;
+  margin: 0.5rem 0;
+}
+
+.footer-center-grid {
+  justify-self: center;
+}
+
+.hlane-footer-logo {
+  width: 14rem;
+}
+
+.social-links-container {
+  justify-self: center;
+  text-align: right;
+}
+
+.social-links {
+  font-size: 2.2rem;
+  margin: 0 0.5rem;
+  color: #232d8d;
+  transition: 0.3s all ease-in-out;
+}
+
+.social-links:hover {
+  opacity: 0.7;
+  color: #232d8d;
+}
+
+.footer-right-grid {
+}
+
+.creator-section {
+  width: 100%;
+  background: #46772f;
+  background: #6c7e55;
+  background: #465334;
+}
+
+.creator-para {
+  padding: 2rem 1rem;
+  margin: 0;
+  color: #65b83f;
+  color: #a4ce6e;
+}
+
+.website-creator {
+  color: #fff;
+  text-decoration: none;
+}
