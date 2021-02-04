@@ -1,18 +1,37 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import "./Nav.css";
 
 const Nav = () => {
-  if (window.scrollY > 10) {
-    document.querySelector(".navbar").style.height = "500px";
-  }
+  const navRef = useRef(null);
+  const logoRef = useRef(null);
+
+  const navScroll = () => {
+    if (window.scrollY > 10) {
+      navRef.current.classList.add("navscroll");
+      logoRef.current.style.width = "7rem";
+    } else if (window.scrollY < 10) {
+      navRef.current.classList.remove("navscroll");
+      logoRef.current.style.width = "10rem";
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", navScroll);
+
+    return () => {
+      window.removeEventListener("scroll", navScroll);
+    };
+  });
+
   return (
     <>
-      <nav className="navbar">
+      <nav className="navbar" ref={navRef}>
         <div className="nav-link-container">
           <a href="#">
             <img
               src="\hllogo.png"
               alt="Hannah Lane Realtor Logo"
+              ref={logoRef}
               className="hlane-logo"
             />
           </a>
