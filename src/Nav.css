@@ -47,6 +47,11 @@
   opacity: 1;
 }
 
+.active {
+  color: rgb(203, 255, 61);
+  opacity: 1;
+}
+
 .telephone-container {
   justify-self: end;
   margin: 0 1rem;

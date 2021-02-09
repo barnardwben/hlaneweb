@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import "./Nav.css";
+import { NavLink, Link } from "react-router-dom";
 
 const Nav = () => {
   const navRef = useRef(null);
@@ -27,23 +28,23 @@ const Nav = () => {
     <>
       <nav className="navbar" ref={navRef}>
         <div className="nav-link-container">
-          <a href="#">
+          <Link to="/">
             <img
               src="\hllogo.png"
               alt="Hannah Lane Realtor Logo"
               ref={logoRef}
               className="hlane-logo"
             />
-          </a>
-          <a href="#" className="nav-link">
+          </Link>
+          <NavLink exact to="/" className="nav-link" activeClassName="active">
             Home
-          </a>
-          <a href="#" className="nav-link">
+          </NavLink>
+          <NavLink to="/about" className="nav-link" activeClassName="active">
             About
-          </a>
-          <a href="#" className="nav-link">
+          </NavLink>
+          <NavLink to="/contact" className="nav-link" activeClassName="active">
             Contact
-          </a>
+          </NavLink>
         </div>
         <div className="telephone-container">
           <a className="telephone-num" href="tel:651-497-1074">
