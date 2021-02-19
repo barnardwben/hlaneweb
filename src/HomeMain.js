@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import * as d3 from "d3";
 import "./HomeMain.css";
 const HomeMain = () => {
   return (
@@ -53,6 +54,11 @@ const HomeMain = () => {
               Marin, and the globe.
             </p>
           </div>
+        </section>
+        <section className="hmain-section-two">
+          <article>
+            <form></form>
+          </article>
         </section>
       </main>
     </>
