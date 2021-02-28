@@ -27,8 +27,8 @@ const Footer = () => {
                 className="hlane-footer-logo"
               />
               <div className="social-links-container">
-                <i class="fab fa-facebook-square social-links"></i>
-                <i class="fab fa-linkedin social-links"></i>
+                <i className="fab fa-facebook-square social-links"></i>
+                <i className="fab fa-linkedin social-links"></i>
               </div>
             </div>
             <div className="footer-right-grid"></div>
@@ -39,6 +39,7 @@ const Footer = () => {
             Website Created by{" "}
             <a
               target="_blank"
+              rel="noreferrer"
               href="https://www.benjamin-barnard.com/"
               className="website-creator"
             >
