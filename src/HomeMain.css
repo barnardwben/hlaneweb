@@ -29,8 +29,8 @@
 }
 
 .hannah-image {
-  width: 500px;
-  height: 350px;
+  width: 375px;
+  height: 275px;
 }
 
 .home-main-paras {
@@ -38,17 +38,184 @@
   color: rgb(77, 100, 110);
   line-height: 2rem;
   text-align: justify;
+  height: 400px;
+}
+
+.hmain-section-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 80%;
+  margin: 0 auto 5rem auto;
+  border-radius: 5px;
+  border: 1px solid rgba(192, 11, 11, 0.11);
+  background: #fff3f0;
+  box-shadow: 0px 0px 15px rgba(63, 48, 45, 0.116);
 }
 
 /* FORM */
-.mortgage {
+.form-section-container {
+  grid-column: 1;
+  width: 100%;
+  padding: 0 0.4px;
+  color: rgb(87, 100, 107);
   display: grid;
+  border-right: 1px solid rgba(175, 29, 29, 0.137);
   grid-template-columns: 1fr;
 }
 
-.input-container {
+.enter-details-para {
+  margin: 1rem 3rem 0 3rem;
+  text-align: justify;
+  justify-self: center;
+}
+
+.mortgage-form {
   display: grid;
   grid-template-columns: 1fr;
-  width: 200px;
-  margin: 10rem;
+  margin: 0;
+  padding: 0rem 0 3.5rem 0;
+  justify-items: center;
+  width: 340px;
+  background: #fff2ee;
+  height: 390px;
+  overflow-y: scroll;
+}
+
+.mortgage-form::-webkit-scrollbar {
+  width: 0.5rem;
+}
+.mortgage-form::-webkit-scrollbar-track {
+  background: #f8fffe;
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.226);
+}
+.mortgage-form::-webkit-scrollbar-thumb {
+  background-color: rgb(173, 199, 211);
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+label {
+  margin: 0.75rem 0;
+  color: rgb(65, 78, 80);
+  font-size: 1.1rem;
+}
+
+input {
+  display: block;
+  width: 250px;
+  margin: 0.5rem 0;
+  border: none;
+  color: rgb(48, 55, 95);
+  font-size: 1rem;
+  padding: 0.25rem;
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.096);
+}
+
+select {
+  display: block;
+  font-size: 1rem;
+  padding: 0.25rem 0;
+  color: rgb(86, 92, 97);
+  width: 260px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.range-width {
+  width: 260px;
+  box-shadow: 0 0 0 black;
+}
+
+.graph-section-container {
+  position: relative;
+  grid-column: 2/5;
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+  color: rgb(87, 100, 107);
+}
+
+.graph-h3 {
+  font-size: 2rem;
+  margin: 32px 0 0 0;
+}
+
+.graph-para {
+  margin: 0 0 24px 0;
+  font-size: 1.5rem;
+}
+
+svg:not(:root) {
+  overflow: visible;
+}
+
+.graph-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.annIns-container {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.annIns-permonth {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #0a1045;
+}
+
+.tax-container {
+  grid-column: 1;
+  grid-row: 1;
+  margin: 9rem 0 0 0;
+}
+
+.tax-permonth {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #00c2d1;
+}
+
+.Pie {
+  grid-row: 1;
+  grid-column: 2;
+}
+
+.total-container {
+  position: relative;
+  grid-column: 2;
+  top: -13rem;
+}
+
+.total-permonth {
+  font-size: 2rem;
+  font-weight: bold;
+  /* B08EA2, FAC9B8, FCEFF9 */
+  color: #ce6300;
+}
+
+.mortgage-price-container {
+  grid-column: 3;
+  grid-row: 1;
+  margin: 5rem 0 0 0;
+}
+
+.mortgage-para,
+.tax-para,
+.annIns-para {
+  font-size: 1.5rem;
+}
+
+.mortgage-permonth {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #afdf2c;
 }
