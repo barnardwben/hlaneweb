@@ -39,11 +39,24 @@ const Nav = () => {
           <NavLink exact to="/" className="nav-link" activeClassName="active">
             Home
           </NavLink>
+          <div>
+            <NavLink
+              to="/minneapolis"
+              className="nav-link"
+              activeClassName="active"
+            >
+              Minneapolis
+            </NavLink>
+            <NavLink
+              to="/st.paul"
+              className="nav-link"
+              activeClassName="active"
+            >
+              St.Paul
+            </NavLink>
+          </div>
           <NavLink to="/about" className="nav-link" activeClassName="active">
             About
-          </NavLink>
-          <NavLink to="/contact" className="nav-link" activeClassName="active">
-            Contact
           </NavLink>
         </div>
         <div className="telephone-container">

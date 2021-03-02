@@ -2,6 +2,7 @@
 
 .navbar {
   position: fixed;
+  top: 0;
   width: 100%;
   /* background: rgba(34, 34, 34, 0.589);
   background: #b08ea2ea;
@@ -10,7 +11,7 @@
   grid-template-columns: 1fr 1fr;
   justify-content: center;
   align-items: center;
-  z-index: 1;
+  z-index: 3;
   transition: 0.3s all ease-in-out;
 }
 
@@ -45,6 +46,7 @@
 
 .nav-link:hover {
   opacity: 1;
+  color: rgb(203, 255, 61);
 }
 
 .active {
