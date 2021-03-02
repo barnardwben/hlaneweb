@@ -31,7 +31,18 @@ const Footer = () => {
                 <i className="fab fa-linkedin social-links"></i>
               </div>
             </div>
-            <div className="footer-right-grid"></div>
+            <div className="footer-right-grid">
+              <div className="verve-container">
+                <img
+                  src="hannahimages\Verve Logo.png"
+                  alt="Verve Realty Logo"
+                  className="verve-logo"
+                />
+                <p className="partnered">
+                  Partnered with Verve Realty Brokerage
+                </p>
+              </div>
+            </div>
           </div>
         </div>
         <div className="creator-section">
@@ -45,7 +56,7 @@ const Footer = () => {
             >
               Benjamin Barnard
             </a>
-            , © 2020
+            , © 2021
           </p>
         </div>
       </footer>
