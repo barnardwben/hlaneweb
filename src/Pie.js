@@ -15,7 +15,7 @@ const Pie = (props) => {
   const height = 2 * outerRadius + margin.top + margin.bottom;
 
   useEffect(() => {
-    drawChart();
+    return drawChart();
   }, [data]);
 
   function drawChart() {
