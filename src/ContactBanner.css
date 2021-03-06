@@ -1,0 +1,34 @@
+/* SECTION FOUR */
+.hmain-section-four {
+  width: 100%;
+  height: 300px;
+  margin: 0rem 0 0 0;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  background: #0a1045;
+}
+
+.secfour-contact {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 200;
+  margin: 0 0 1rem 0;
+}
+
+.email-link {
+  text-decoration: none;
+  color: #afdf2c;
+}
+
+.splitup {
+  margin: 0 2rem;
+  font-size: 1.5rem;
+  opacity: 1;
+  transition: 0.3s all ease-in-out;
+}
+
+.splitup:hover {
+  opacity: 0.8;
+}
