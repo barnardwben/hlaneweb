@@ -1,0 +1,70 @@
+.about-main {
+  margin: 0 0 21.75rem 0;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+}
+
+.aboutmain-section-one {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #fff;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  padding: 0rem 0 0 0;
+  /* justify-items: center; */
+}
+
+.about-heading-one {
+  font-size: 2rem;
+  font-weight: 500;
+  color: rgb(77, 100, 110);
+}
+
+.about-text {
+  margin: 8rem 0;
+  justify-self: right;
+  align-self: center;
+}
+
+.about-main-paras {
+  width: 550px;
+  color: rgb(77, 100, 110);
+  line-height: 2rem;
+  margin: 0;
+  text-align: justify;
+}
+
+.image-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.right-right {
+  padding: 0rem 0 0 0;
+  justify-self: end;
+  width: 400px;
+  height: 100%;
+  background: url("https://images.unsplash.com/photo-1547499417-29204c97a299?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80")
+    center center/cover no-repeat;
+}
+
+.rrbgclr {
+  width: 100%;
+  height: 100%;
+  background: rgba(27, 27, 27, 0.87);
+}
+
+.abouthan {
+  width: 525px;
+  position: fixed;
+  right: 0rem;
+  bottom: 0;
+}
+
+.stickthree {
+  position: absolute;
+  bottom: 0rem;
+}
