@@ -1,0 +1,260 @@
+.minnmain {
+  position: relative;
+  top: -0.5rem;
+  background: #fff;
+  margin: 55vh 0 21.25rem 0;
+  padding: 5rem 0 0 0;
+
+  z-index: 1;
+}
+
+.minn-main-header {
+  margin: 0rem auto 3rem auto;
+  width: 600px;
+  font-size: 2.1rem;
+  text-align: center;
+  font-family: hero-new, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  color: rgb(49, 63, 70);
+}
+
+.minnmh-hr {
+  width: 73%;
+  padding: 0.9px 0;
+  border: none;
+  background: rgb(126, 151, 163);
+}
+
+.minnmain-top-grid {
+  width: 70%;
+  border-radius: 5px;
+  margin: 2rem auto 5rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.233);
+}
+
+.dtwn-container {
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background: url("https://www.tripsavvy.com/thmb/dbjcHlj7ocq2dbqXEdGayXanWO4=/950x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/minneapolis-st-paul-minnesota-city-view-164333894-5786592b3df78c1e1f6576ce.jpg")
+    center center/cover no-repeat;
+  height: 520px;
+  overflow: hidden;
+  justify-self: end;
+  display: grid;
+  margin: 0rem 0;
+  justify-items: end;
+}
+
+/* COLOR PALETTE #0A1045, AFDF2C, 00C2D1, B08EA2, FAC9B8, FCEFF9 */
+
+.dtwn-right-container {
+  margin: 0rem;
+  background: #0a1045;
+  color: #fff;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  height: 520px;
+  width: 100%;
+  justify-self: start;
+  text-align: center;
+}
+
+.dtwn-right-content {
+  width: 80%;
+  margin: 3rem auto;
+}
+
+.dtwn-right-h3 {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.dtwn-right-para {
+  font-size: 1.3rem;
+  font-weight: 200;
+  text-align: justify;
+}
+
+.dtwn-hr {
+  width: 73%;
+  padding: 0.9px 0;
+  border: none;
+  background: rgb(83, 173, 146);
+}
+
+.open-locations {
+  position: fixed;
+  bottom: 0;
+  color: #00c2d1;
+  font-size: 4rem;
+  margin: 0 1.5rem;
+  cursor: pointer;
+  text-shadow: 0px 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.open-locations:active {
+  text-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.274);
+  transform: translateY(2px);
+}
+
+.showlocations {
+  animation: moveLocationsRight;
+  animation-duration: 0.5s;
+}
+
+@keyframes moveLocationsRight {
+  0% {
+    transform: translateX(-350px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.stick {
+  position: absolute;
+  bottom: 20rem;
+  color: #00c2d1;
+  font-size: 4rem;
+  margin: 0 1.5rem;
+  cursor: pointer;
+  text-shadow: 0px 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.locations-selection {
+  color: rgb(228, 228, 228);
+  background: #0a1045;
+  font-weight: 500;
+  width: 100%;
+  padding: 1.2rem 0;
+  font-size: 1.2rem;
+}
+
+.exit-btn {
+  position: absolute;
+  cursor: pointer;
+  color: rgb(207, 82, 82);
+  font-size: 1.3rem;
+  right: 1rem;
+}
+
+.locations-container {
+  position: fixed;
+  bottom: 0;
+  display: block;
+  background: rgb(219, 219, 219);
+  color: rgb(49, 63, 70);
+  width: 350px;
+  height: 500px;
+  text-align: center;
+  margin: 1rem auto 4rem auto;
+  z-index: 1;
+}
+
+.hidelocations {
+  animation: moveLocationsLeft;
+  animation-duration: 0.5s;
+}
+
+@keyframes moveLocationsLeft {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-350px);
+  }
+}
+
+.displayNada {
+  display: none;
+  transform: translateX(-350px);
+}
+
+.locations-btn-container {
+  position: absolute;
+  top: 2rem;
+  display: block;
+  background: rgb(219, 219, 219);
+  color: rgb(49, 63, 70);
+  width: 350px;
+  height: 500px;
+  overflow-y: scroll;
+  text-align: center;
+  margin: 2rem auto 4rem auto;
+  z-index: 1;
+}
+
+.location-btn {
+  display: block;
+  font-size: 1.1rem;
+  background: rgb(219, 219, 219);
+  color: rgb(49, 63, 70);
+  cursor: pointer;
+  border: none;
+  margin: 0;
+  width: 100%;
+  height: 4rem;
+}
+
+.location-btn:hover {
+  background: rgb(124, 156, 168);
+  cursor: pointer;
+}
+
+.minnsec-one {
+  position: relative;
+  display: grid;
+  width: 90%;
+  margin: 0 auto;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+}
+
+.minnsec-all {
+  display: grid;
+  width: 90%;
+  margin: 0 auto;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+.map-list-container {
+  background: #e0e1e9;
+  color: rgb(49, 63, 70);
+  padding: 0 1rem 1rem 1rem;
+  margin: 0 0 2rem 0;
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.158);
+}
+
+iframe {
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.116);
+}
+
+.desc-container {
+  width: 580px;
+  text-align: justify;
+  font-size: 1.1rem;
+  color: #fff;
+
+  background: rgb(63, 109, 133);
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.158);
+}
+
+.desc-para {
+  margin: 1rem;
+  padding: 1rem 0;
+}
+
+.sticktwo {
+  position: absolute;
+  bottom: 22.75rem;
+  margin: 0;
+}
