@@ -5,6 +5,7 @@ import { NavLink, Link } from "react-router-dom";
 const Nav = () => {
   const navRef = useRef(null);
   const logoRef = useRef(null);
+  const hamburgerRef = useRef(null);
 
   const navScroll = () => {
     if (window.scrollY > 10) {
@@ -16,11 +17,20 @@ const Nav = () => {
     }
   };
 
+  const menuToggler = () => {
+    hamburgerRef.current.classList.toggle("nav-res-hide");
+  };
+
   useEffect(() => {
     window.addEventListener("scroll", navScroll);
-
+    document
+      .querySelector(".hamburger-menu")
+      .addEventListener("click", menuToggler);
     return () => {
       window.removeEventListener("scroll", navScroll);
+      document
+        .querySelector(".hamburger-menu")
+        .removeEventListener("click", menuToggler);
     };
   });
 
@@ -59,11 +69,45 @@ const Nav = () => {
             About
           </NavLink>
         </div>
-        <div className="telephone-container">
-          <a className="telephone-num" href="tel:651-497-1074">
+        <div className="telephone-container nav-tele">
+          <a className="telephone-num nav-tele" href="tel:651-497-1074">
             <i className="fas fa-mobile-alt"></i>
             (651)-497-1074
           </a>
+        </div>
+        <div className="hamburger-menu">
+          <i className="fas fa-bars hamburger"></i>
+        </div>
+        <div className="reponsive-nav-menu nav-res-hide" ref={hamburgerRef}>
+          <NavLink
+            exact
+            to="/"
+            className="nav-link-res"
+            activeClassName="active"
+          >
+            <p className="nav-p">Home</p>
+          </NavLink>
+          <NavLink
+            to="/minneapolis"
+            className="nav-link-res"
+            activeClassName="active"
+          >
+            <p className="nav-p">Minneapolis</p>
+          </NavLink>
+          <NavLink
+            to="/st.paul"
+            className="nav-link-res"
+            activeClassName="active"
+          >
+            <p className="nav-p">St. Paul</p>
+          </NavLink>
+          <NavLink
+            to="/about"
+            className="nav-link-res"
+            activeClassName="active"
+          >
+            <p className="nav-p">About</p>
+          </NavLink>
         </div>
       </nav>
     </>
