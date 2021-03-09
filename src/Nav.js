@@ -21,13 +21,21 @@ const Nav = () => {
     hamburgerRef.current.classList.toggle("nav-res-hide");
   };
 
+  const checkWindowSize = () => {
+    if (window.innerWidth > 920) {
+      hamburgerRef.current.classList.add("nav-res-hide");
+    }
+  };
+
   useEffect(() => {
     window.addEventListener("scroll", navScroll);
+    window.addEventListener("resize", checkWindowSize);
     document
       .querySelector(".hamburger-menu")
       .addEventListener("click", menuToggler);
     return () => {
       window.removeEventListener("scroll", navScroll);
+      window.removeEventListener("resize", checkWindowSize);
       document
         .querySelector(".hamburger-menu")
         .removeEventListener("click", menuToggler);
