@@ -69,4 +69,61 @@
   position: absolute;
   bottom: 0;
   width: 650px;
+  width: 45%;
+  transition: 0.3s all ease-in-out;
+}
+
+@media only screen and (max-width: 1185px) {
+  .cutimagehannah {
+    left: -4rem;
+    width: 530px;
+  }
+}
+
+@media only screen and (max-width: 959px) {
+  .cutimagehannah {
+    left: -4rem;
+    width: 55%;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .header-one {
+    font-size: 3.4rem;
+    line-height: 4.5rem;
+  }
+
+  .header-two {
+    font-size: 2.2rem;
+  }
+
+  .header-para {
+    font-size: 2.1rem;
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  .header-text-container {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .header-one {
+    font-size: 2.7rem;
+  }
+
+  .header-two {
+    font-size: 1.6rem;
+  }
+
+  .header-para {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 499px) {
+  .cutimagehannah {
+    left: 2rem;
+    width: 75%;
+  }
 }
