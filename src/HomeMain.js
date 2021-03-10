@@ -162,14 +162,7 @@ const HomeMain = () => {
           results
         </h2>
         <hr className="hmh-hr" />
-
         <section className="hmain-section-uno">
-          <div className="hmainsecuno-grid">
-            <div></div>
-            <div>
-              <img src="" alt="" />
-            </div>
-          </div>
           <div className="hmainsecuno-flex">
             <NavLink to="/minneapolis">
               <div className="hideImage" ref={condoPhotoOneRef}>
@@ -288,7 +281,6 @@ const HomeMain = () => {
             </div>
           </div>
         </section>
-
         <hr className="hmh-hr" />
         <h2 className="home-second-header">
           <span className="bolded-text">It's easy to get</span>
@@ -301,217 +293,219 @@ const HomeMain = () => {
             that place you've been dreaming of.
           </span>
         </h2>
-        <section className="hmain-section-three">
-          <div className="form-section-container">
-            <p className="enter-details-para">
-              Find out an estimate of your pontential monthly mortgage payment
-              by filling in the details below. Results include taxes, fees, and
-              insurance.
-            </p>
-            <form className="mortgage-form">
-              <label htmlFor="hprice">
-                Home Price
-                <input
-                  id="hprice"
-                  type="number"
-                  name="homePrice"
-                  max="5000000"
-                  min="10000"
-                  step={
-                    state.homePrice <= 495000
-                      ? "5000"
-                      : state.homePrice < 1000001
-                      ? "50000"
-                      : state.homePrice < 4000000
-                      ? "500000"
-                      : "25000"
-                  }
-                  placeholder="250,000"
-                  value={state.homePrice}
-                  onChange={handleChange}
-                />
-                <input
-                  className="range-width"
-                  type="range"
-                  name="homePrice"
-                  step={
-                    state.homePrice <= 495000
-                      ? "5000"
-                      : state.homePrice < 1000001
-                      ? "50000"
-                      : state.homePrice < 4000000
-                      ? "500000"
-                      : "25000"
-                  }
-                  min="10000"
-                  max="5000000"
-                  value={state.homePrice}
-                  onChange={handleChange}
-                />
-              </label>
-
-              <label htmlFor="dpayment">
-                Down Payment
-                <input
-                  id="dpayment"
-                  type="number"
-                  name="downPayment"
-                  max="5000000"
-                  min="0"
-                  step={
-                    state.downPayment < 500000
-                      ? "5000"
-                      : state.downPayment < 1000000
-                      ? "50000"
-                      : state.downPayment < 4000000
-                      ? "500000"
-                      : "10000"
-                  }
-                  value={state.downPayment}
-                  onChange={handleChange}
-                />
-                <input
-                  className="range-width"
-                  type="range"
-                  name="downPayment"
-                  step={
-                    state.downPayment < 500000
-                      ? "5000"
-                      : state.downPayment < 1000000
-                      ? "50000"
-                      : state.downPayment < 4000000
-                      ? "500000"
-                      : "10000"
-                  }
-                  min="0"
-                  max="5000000"
-                  value={state.downPayment}
-                  onChange={handleChange}
-                />
-              </label>
-
-              <label htmlFor="">
-                Mortgage Interest Rate
-                <span className="percentage"> %</span>
-                <input
-                  type="number"
-                  name="mortgageInterestRate"
-                  max="12"
-                  min="1"
-                  step=".04"
-                  value={state.mortgageInterestRate}
-                  onChange={handleChange}
-                />
-                <input
-                  className="range-width"
-                  type="range"
-                  name="mortgageInterestRate"
-                  step=".04"
-                  min="1"
-                  max="12"
-                  value={state.mortgageInterestRate}
-                  onChange={handleChange}
-                />
-              </label>
-              <label htmlFor="">
-                Loan Type
-                <select
-                  name="loanType"
-                  value={state.loanType}
-                  onChange={handleChange}
-                >
-                  <option value="30-yearfixed">30-Year Fixed</option>
-                  <option value="15-yearfixed">15-Year Fixed</option>
-                </select>
-              </label>
-              <label htmlFor="">
-                Annual Property Tax
-                <span className="percentage"> %</span>
-                <input
-                  type="number"
-                  name="annualPropertyTax"
-                  max="5.01"
-                  min="0"
-                  step=".03"
-                  value={state.annualPropertyTax}
-                  onChange={handleChange}
-                />
-                <input
-                  className="range-width"
-                  type="range"
-                  name="annualPropertyTax"
-                  step=".03"
-                  min="0"
-                  max="5.01"
-                  value={state.annualPropertyTax}
-                  onChange={handleChange}
-                />
-              </label>
-              <label htmlFor="">
-                Annual Homeowners Insurance
-                <input
-                  type="number"
-                  name="annualHomeownersIns"
-                  max="15000"
-                  min="0"
-                  step="50"
-                  value={state.annualHomeownersIns}
-                  onChange={handleChange}
-                />
-                <input
-                  className="range-width"
-                  type="range"
-                  name="annualHomeownersIns"
-                  step="50"
-                  min="0"
-                  max="15000"
-                  value={state.annualHomeownersIns}
-                  onChange={handleChange}
-                />
-              </label>
-            </form>
-          </div>
-          <div className="graph-section-container">
-            <h3 className="graph-h3">Total Monthly Payment Breakdown</h3>
-            <p className="graph-para">
-              Based on a ${state.homePrice - state.downPayment} mortgage
-            </p>
-            <div className="graph-grid">
-              <div className="annIns-container">
-                <p className="annIns-para">
-                  Home <br /> Insurance <br />
-                  <span className="annIns-permonth">
-                    ${Math.round(annualIns)}
-                  </span>
-                </p>
-              </div>
-              <Pie
-                className="Pie"
-                innerRadius={85}
-                outerRadius={130}
-                data={data}
-              />
-              <div className="total-container">
-                <div className="total-permonth">
-                  ${Math.round(monthlyTots + annualIns + monthlyPropTax)}/mo.
+        <section className="hmain-section-tres">
+          <div className="hmain-section-three">
+            <div className="graph-section-container GSC">
+              <h3 className="graph-h3">Total Monthly Payment Breakdown</h3>
+              <p className="graph-para">
+                Based on a ${state.homePrice - state.downPayment} mortgage
+              </p>
+              <div className="graph-grid GG">
+                <div className="Pie">
+                  <Pie innerRadius={105} outerRadius={150} data={data} />
+                  <div className="total-container">
+                    <div className="total-permonth">
+                      ${Math.round(monthlyTots + annualIns + monthlyPropTax)}
+                      /mo. <br /> Total
+                    </div>
+                  </div>
+                  <div className="costs-container">
+                    <div className="annIns-container m-box">
+                      <p className="annIns-para">
+                        Home <br /> Insurance <br />
+                        <span className="annIns-permonth">
+                          ${Math.round(annualIns)}
+                        </span>
+                      </p>
+                    </div>
+                    <div className="mortgage-price-container m-box">
+                      <p className="mortgage-para">
+                        Mortgage <br /> Payment(P&I) <br />
+                        <span className="mortgage-permonth">
+                          ${Math.round(monthlyTots)}
+                        </span>
+                      </p>
+                    </div>
+                    <div className="tax-container m-box">
+                      <p className="tax-para">
+                        Taxes <br /> & Other Fees <br />
+                        <span className="tax-permonth">
+                          ${Math.round(monthlyPropTax)}
+                        </span>
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div className="mortgage-price-container">
-                <p className="mortgage-para">
-                  Mortgage <br /> Payment(P&I) <br />
-                  <span className="mortgage-permonth">
-                    ${Math.round(monthlyTots)}
-                  </span>
-                </p>
-              </div>
-              <div className="tax-container">
-                <p className="tax-para">
-                  Taxes <br /> & Other Fees <br />
-                  <span className="tax-permonth">
-                    ${Math.round(monthlyPropTax)}
-                  </span>
-                </p>
-              </div>
+            </div>
+            <div className="form-section-container FSC">
+              <p className="enter-details-para EDT">
+                Find out an estimate of your pontential monthly mortgage payment
+                by filling in the details below. Results include taxes, fees,
+                and insurance.
+              </p>
+              <form className="mortgage-form MF">
+                <label htmlFor="hprice">
+                  Home Price
+                  <input
+                    id="hprice"
+                    type="number"
+                    name="homePrice"
+                    max="5000000"
+                    min="10000"
+                    step={
+                      state.homePrice <= 495000
+                        ? "5000"
+                        : state.homePrice < 1000001
+                        ? "50000"
+                        : state.homePrice < 4000000
+                        ? "500000"
+                        : "25000"
+                    }
+                    placeholder="250,000"
+                    value={state.homePrice}
+                    onChange={handleChange}
+                  />
+                  <input
+                    className="range-width"
+                    type="range"
+                    name="homePrice"
+                    step={
+                      state.homePrice <= 495000
+                        ? "5000"
+                        : state.homePrice < 1000001
+                        ? "50000"
+                        : state.homePrice < 4000000
+                        ? "500000"
+                        : "25000"
+                    }
+                    min="10000"
+                    max="5000000"
+                    value={state.homePrice}
+                    onChange={handleChange}
+                  />
+                </label>
+
+                <label htmlFor="dpayment">
+                  Down Payment
+                  <input
+                    id="dpayment"
+                    type="number"
+                    name="downPayment"
+                    max="5000000"
+                    min="0"
+                    step={
+                      state.downPayment < 500000
+                        ? "5000"
+                        : state.downPayment < 1000000
+                        ? "50000"
+                        : state.downPayment < 4000000
+                        ? "500000"
+                        : "10000"
+                    }
+                    value={state.downPayment}
+                    onChange={handleChange}
+                  />
+                  <input
+                    className="range-width"
+                    type="range"
+                    name="downPayment"
+                    step={
+                      state.downPayment < 500000
+                        ? "5000"
+                        : state.downPayment < 1000000
+                        ? "50000"
+                        : state.downPayment < 4000000
+                        ? "500000"
+                        : "10000"
+                    }
+                    min="0"
+                    max="5000000"
+                    value={state.downPayment}
+                    onChange={handleChange}
+                  />
+                </label>
+
+                <label htmlFor="">
+                  Mortgage Interest Rate
+                  <span className="percentage"> %</span>
+                  <input
+                    type="number"
+                    name="mortgageInterestRate"
+                    max="12"
+                    min="1"
+                    step=".04"
+                    value={state.mortgageInterestRate}
+                    onChange={handleChange}
+                  />
+                  <input
+                    className="range-width"
+                    type="range"
+                    name="mortgageInterestRate"
+                    step=".04"
+                    min="1"
+                    max="12"
+                    value={state.mortgageInterestRate}
+                    onChange={handleChange}
+                  />
+                </label>
+                <label htmlFor="">
+                  Loan Type
+                  <select
+                    name="loanType"
+                    value={state.loanType}
+                    onChange={handleChange}
+                  >
+                    <option value="30-yearfixed">30-Year Fixed</option>
+                    <option value="15-yearfixed">15-Year Fixed</option>
+                  </select>
+                </label>
+                <label htmlFor="">
+                  Annual Property Tax
+                  <span className="percentage"> %</span>
+                  <input
+                    type="number"
+                    name="annualPropertyTax"
+                    max="5.01"
+                    min="0"
+                    step=".03"
+                    value={state.annualPropertyTax}
+                    onChange={handleChange}
+                  />
+                  <input
+                    className="range-width"
+                    type="range"
+                    name="annualPropertyTax"
+                    step=".03"
+                    min="0"
+                    max="5.01"
+                    value={state.annualPropertyTax}
+                    onChange={handleChange}
+                  />
+                </label>
+                <label htmlFor="">
+                  Annual Homeowners Insurance
+                  <input
+                    type="number"
+                    name="annualHomeownersIns"
+                    max="15000"
+                    min="0"
+                    step="50"
+                    value={state.annualHomeownersIns}
+                    onChange={handleChange}
+                  />
+                  <input
+                    className="range-width"
+                    type="range"
+                    name="annualHomeownersIns"
+                    step="50"
+                    min="0"
+                    max="15000"
+                    value={state.annualHomeownersIns}
+                    onChange={handleChange}
+                  />
+                </label>
+              </form>
             </div>
           </div>
         </section>
