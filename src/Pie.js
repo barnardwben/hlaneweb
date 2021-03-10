@@ -7,11 +7,11 @@ const Pie = (props) => {
   const margin = {
     top: 50,
     right: 50,
-    bottom: 50,
+    bottom: 0,
     left: 50,
   };
 
-  const width = 1 * outerRadius + margin.left + margin.right;
+  const width = 1.2 * outerRadius + margin.left + margin.right;
   const height = 2 * outerRadius + margin.top + margin.bottom;
 
   useEffect(() => {
