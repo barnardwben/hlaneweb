@@ -863,6 +863,10 @@ input::-webkit-inner-spin-button {
 }
 
 @media only screen and (max-width: 501px) {
+  .hmain-section-three {
+    width: 100%;
+    padding: 0;
+  }
   .costs-container {
     display: block;
   }
