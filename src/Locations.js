@@ -4,6 +4,7 @@ const Locations = ({ items }) => {
   const [oneMapState, setOneMapState] = useState(false);
 
   const toggleDescription = () => {
+    console.log(document.querySelector("main").offsetHeight);
     if (document.querySelector("main").offsetHeight < 2000) {
       setOneMapState(true);
     } else if (document.querySelector("main").offsetHeight > 2000) {
@@ -26,14 +27,11 @@ const Locations = ({ items }) => {
           <>
             <div key={id} className="map-list-container">
               <h2 className="location-title">{locationtitle}</h2>
-              <iframe src={src} title={src} width="580" height="350"></iframe>
-              {oneMapState ? (
-                <div className="desc-container">
-                  <p className="desc-para">{desc}</p>
-                </div>
-              ) : (
-                false
-              )}
+              <iframe
+                src={src}
+                title={src}
+                className={oneMapState ? "oneifrizzle" : "allifrizzle"}
+              ></iframe>
             </div>
           </>
         );
