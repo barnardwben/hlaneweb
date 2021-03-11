@@ -79,7 +79,7 @@ const AboutMain = () => {
                 <img src="" alt="" />
               </div>
               <img
-                src="hannahimages\abouthanbw.png"
+                src="hannahimages\comphanatwo.png"
                 alt="Hannah Lane Realtor"
                 className="abouthan"
                 ref={hannahImgRef}
