@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./MinnMain.css";
-import LocationTitles from "./LocationTitles";
+import MinnLocationsTitles from "./MinnLocationsTitles";
 import Locations from "./Locations";
 import ContactBanner from "./ContactBanner";
 import minneapolisdata from "./minneapolisdata";
@@ -16,17 +16,31 @@ const MinnMain = () => {
 
   console.log();
 
+  const hideOnClick = () => {
+    document
+      .querySelector(".locations-container")
+      .classList.add("hidelocations");
+    setTimeout(() => {
+      document
+        .querySelector(".locations-container")
+        .classList.add("displayNada");
+    }, 400);
+  };
+
   const filterLocations = (location) => {
     if (location === "All") {
       document.querySelector(".minnsec-one").classList.remove("minnsec-all");
       setLocationList(minneapolisdata);
+      hideOnClick();
       return;
+    } else {
+      document.querySelector(".minnsec-one").classList.add("minnsec-all");
+      const newItems = minneapolisdata.filter(
+        (mdata) => mdata.locationtitle === location
+      );
+      setLocationList(newItems);
     }
-    document.querySelector(".minnsec-one").classList.add("minnsec-all");
-    const newItems = minneapolisdata.filter(
-      (mdata) => mdata.locationtitle === location
-    );
-    setLocationList(newItems);
+    hideOnClick();
   };
   return (
     <main className="minnmain">
@@ -55,7 +69,10 @@ const MinnMain = () => {
           </div>
         </div>
       </div>
-      <LocationTitles locations={locations} filterLocations={filterLocations} />
+      <MinnLocationsTitles
+        locations={locations}
+        filterLocations={filterLocations}
+      />
       <section className="minnsec-one">
         <Locations items={locationList} />
       </section>
