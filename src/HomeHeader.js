@@ -5,10 +5,7 @@ const HomeHeader = () => {
   const homeHeaderRef = useRef(null);
 
   const headerScroll = () => {
-    if (
-      window.location.href === "http://localhost:3000" ||
-      window.location.href === "http://localhost:3000/"
-    ) {
+    if (window.location.href === "https://hlane.netlify.app/") {
       if (window.scrollY > 0) {
         document.querySelector(
           ".homeheader-bg"

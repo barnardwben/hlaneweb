@@ -37,10 +37,7 @@ const HomeMain = () => {
   };
 
   const condoScroll = () => {
-    if (
-      window.location.href === "http://localhost:3000" ||
-      window.location.href === "http://localhost:3000/"
-    ) {
+    if (window.location.href === "https://hlane.netlify.app/") {
       if (window.scrollY > 500) {
         condoPhotoOneRef.current.classList.add("condoscroll");
         condoPhotoTwoRef.current.classList.add("condoscroll");
@@ -94,10 +91,7 @@ const HomeMain = () => {
         pSixRef.current.classList.add("pscroll");
 
         setTimeout(() => {
-          if (
-            window.location.href === "http://localhost:3000" ||
-            window.location.href === "http://localhost:3000/"
-          ) {
+          if (window.location.href === "https://hlane.netlify.app/") {
             pOneRef.current.classList.remove("hidePara");
             pTwoRef.current.classList.remove("hidePara");
             pThreeRef.current.classList.remove("hidePara");

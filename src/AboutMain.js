@@ -5,7 +5,7 @@ const AboutMain = () => {
   const hannahImgRef = useRef(null);
 
   const hannahScroll = () => {
-    if (window.location.href === "http://localhost:3000/about") {
+    if (window.location.href === "https://hlane.netlify.app/about") {
       if (window.scrollY > document.querySelector("main").offsetHeight - 1020) {
         console.log(document.querySelector("main").offsetHeight);
         hannahImgRef.current.classList.add("stickthree");

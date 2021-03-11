@@ -5,8 +5,8 @@ const MinnLocationsTitles = ({ locations, filterLocations }) => {
   const locationsRef = useRef(null);
   const handleMinnChange = () => {
     if (
-      window.location.href === "http://localhost:3000/minneapolis" ||
-      window.location.href === "http://localhost:3000/minneapolis/"
+      window.location.href === "https://hlane.netlify.app/minneapolis" ||
+      window.location.href === "https://hlane.netlify.app/minneapolis/"
     ) {
       if (window.scrollY > document.querySelector("main").offsetHeight - 630) {
         minnarrowRef.current.classList.add("stick");
@@ -48,8 +48,8 @@ const MinnLocationsTitles = ({ locations, filterLocations }) => {
 
   useEffect(() => {
     if (
-      window.location.href === "http://localhost:3000/minneapolis" ||
-      window.location.href === "http://localhost:3000/minneapolis/"
+      window.location.href === "https://hlane.netlify.app/minneapolis" ||
+      window.location.href === "https://hlane.netlify.app/minneapolis/"
     ) {
       window.addEventListener("scroll", handleMinnChange);
     }
@@ -74,7 +74,7 @@ const MinnLocationsTitles = ({ locations, filterLocations }) => {
       >
         <div className="locations-selection">
           <span>
-            {window.location.href === "http://localhost:3000/minneapolis"
+            {window.location.href === "https://hlane.netlify.app/minneapolis"
               ? "Minneapolis Districts"
               : "St. Paul Districts"}
           </span>
