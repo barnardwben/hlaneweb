@@ -17,6 +17,10 @@ const Nav = () => {
     }
   };
 
+  const removeMenu = () => {
+    hamburgerRef.current.classList.add("nav-res-hide");
+  };
+
   const menuToggler = () => {
     hamburgerRef.current.classList.toggle("nav-res-hide");
   };
@@ -92,6 +96,7 @@ const Nav = () => {
             to="/"
             className="nav-link-res"
             activeClassName="active"
+            onClick={() => removeMenu()}
           >
             <p className="nav-p">Home</p>
           </NavLink>
@@ -99,6 +104,7 @@ const Nav = () => {
             to="/minneapolis"
             className="nav-link-res"
             activeClassName="active"
+            onClick={() => removeMenu()}
           >
             <p className="nav-p">Minneapolis</p>
           </NavLink>
@@ -106,6 +112,7 @@ const Nav = () => {
             to="/st.paul"
             className="nav-link-res"
             activeClassName="active"
+            onClick={() => removeMenu()}
           >
             <p className="nav-p">St. Paul</p>
           </NavLink>
@@ -113,6 +120,7 @@ const Nav = () => {
             to="/about"
             className="nav-link-res"
             activeClassName="active"
+            onClick={() => removeMenu()}
           >
             <p className="nav-p">About</p>
           </NavLink>
