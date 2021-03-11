@@ -14,11 +14,7 @@ const Pie = (props) => {
   const width = 1.2 * outerRadius + margin.left + margin.right;
   const height = 2 * outerRadius + margin.top + margin.bottom;
 
-  useEffect(() => {
-    return drawChart();
-  }, [data]);
-
-  function drawChart() {
+  const drawChart = () => {
     const colorScale = d3
       .scaleOrdinal()
       .domain([data.length])
@@ -52,7 +48,11 @@ const Pie = (props) => {
       .style("stroke", "#ffffff")
       .style("stroke-width", 0);
     // Append text labels
-  }
+  };
+
+  useEffect(() => {
+    return drawChart();
+  }, [data]);
 
   return <div id="pie-container" />;
 };
