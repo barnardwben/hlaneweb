@@ -52,17 +52,16 @@ const StpMain = () => {
             <h3 className="dtwn-right-h3">St. Paul - </h3>
             <hr className="dtwn-hr" />
             <p className="dtwn-right-para">
-              This gorgeous city famous for its artistic culture spans just
-              under 58 mi² and lies on both banks of the Mississippi River. Its
-              made up of diverse communities, all unique for their individual
-              places of entertainment, varying landscapes, and historic
-              architecture.
+              St. Paul, the capital of Minnesota, is home to a multitude of
+              beautiful neighborhoods and is full of culture and opportunity.
+              Its distinct seasons and natural beauty make Saint Paul one of the
+              nations most pleasant cities to reside.
               <br />
               <br />
-              Offering twelve districts, with a vast number of housing, condo,
-              and loft locations ranging from modest dwellings to luxurious
-              properties, Minneapolis is certain to meet the needs of anyone
-              looking to relocate.
+              What Saint Paul has to offer its residents is higher standards in
+              quality of education, parks, well-maintained roadways and
+              excellent healthcare, plus the lakes, trails, taverns and
+              restaurants that comprise this gorgeous city.
             </p>
           </div>
         </div>
