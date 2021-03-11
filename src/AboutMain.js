@@ -78,21 +78,12 @@ const AboutMain = () => {
               <div>
                 <img src="" alt="" />
               </div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                width="2392"
-                height="2788"
-                className="abouthan"
-                ref={hannahImgRef}
-                viewBox="0 0 2392 2788"
-              ></svg>
-              {/* <img
+              <img
                 src="hannahimages\comphanatwo.png"
                 alt="Hannah Lane Realtor"
                 className="abouthan"
                 ref={hannahImgRef}
-              /> */}
+              />
             </div>
             <div className="right-right">
               <div className="rrbgclr"></div>
