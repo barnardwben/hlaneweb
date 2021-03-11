@@ -22,7 +22,7 @@ const Locations = ({ items }) => {
   return (
     <>
       {items.map((item) => {
-        const { id, locationtitle, src, desc } = item;
+        const { id, locationtitle, src } = item;
         return (
           <>
             <div key={id} className="map-list-container">
