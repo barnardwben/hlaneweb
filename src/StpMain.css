@@ -8,6 +8,30 @@
   z-index: 1;
 }
 
+@media only screen and (max-width: 820px) {
+  .minnmain {
+    position: relative;
+    top: -0.5rem;
+    background: #fff;
+    margin: 55vh 0 33.1rem 0;
+    padding: 5rem 0 0 0;
+
+    z-index: 1;
+  }
+}
+
+@media only screen and (max-width: 631px) {
+  .minnmain {
+    position: relative;
+    top: -0.5rem;
+    background: #fff;
+    margin: 55vh 0 16.1rem 0;
+    padding: 5rem 0 0 0;
+
+    z-index: 1;
+  }
+}
+
 .minn-main-header {
   margin: 0rem auto 3rem auto;
   width: 600px;
@@ -17,6 +41,12 @@
   font-weight: 300;
   font-style: normal;
   color: rgb(49, 63, 70);
+}
+
+@media only screen and (max-width: 705px) {
+  .minn-main-header {
+    width: 90%;
+  }
 }
 
 .minnmh-hr {
@@ -49,8 +79,6 @@
   justify-items: end;
 }
 
-/* COLOR PALETTE #0A1045, AFDF2C, 00C2D1, B08EA2, FAC9B8, FCEFF9 */
-
 .dtwn-right-container {
   margin: 0rem;
   background: #0a1045;
@@ -77,6 +105,7 @@
   font-size: 1.3rem;
   font-weight: 200;
   text-align: justify;
+  transition: 0.3s all ease-in-out;
 }
 
 .dtwn-hr {
@@ -84,6 +113,59 @@
   padding: 0.9px 0;
   border: none;
   background: rgb(83, 173, 146);
+}
+
+@media only screen and (max-width: 1371px) {
+  .dtwn-right-para {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 1071px) {
+  .minnmain-top-grid {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  .dtwn-right-para {
+    font-size: 1.1rem;
+  }
+}
+
+@media only screen and (max-width: 730px) {
+  .minnmain-top-grid {
+    width: 90%;
+    grid-template-columns: 1fr;
+  }
+
+  .dtwn-container {
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 0px;
+    height: 400px;
+  }
+
+  .dtwn-right-container {
+    margin: 0rem;
+    background: #0a1045;
+    color: #fff;
+    height: 540px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  .dtwn-right-para {
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .dtwn-right-para {
+    font-size: 1.1rem;
+  }
 }
 
 .open-locations {
@@ -152,7 +234,13 @@
   height: 500px;
   text-align: center;
   margin: 1rem auto 4rem auto;
-  z-index: 1;
+  z-index: 6;
+}
+
+@media only screen and (max-width: 500px) {
+  .locations-container {
+    width: 100%;
+  }
 }
 
 .hidelocations {
@@ -186,6 +274,12 @@
   text-align: center;
   margin: 2rem auto 4rem auto;
   z-index: 1;
+}
+
+@media only screen and (max-width: 500px) {
+  .locations-btn-container {
+    width: 100%;
+  }
 }
 
 .location-btn {
@@ -231,10 +325,91 @@
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.158);
 }
 
-iframe {
+.allifrizzle {
   border: none;
   border-radius: 5px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.116);
+}
+
+.oneifrizzle {
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.116);
+  width: 800px;
+  height: 420px;
+}
+
+@media only screen and (max-width: 1400px) {
+  .allifrizzle {
+    width: 540px;
+    height: 320px;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .allifrizzle {
+    width: 500px;
+  }
+}
+
+@media only screen and (max-width: 1215px) {
+  .allifrizzle {
+    width: 450px;
+  }
+}
+
+@media only screen and (max-width: 1105px) {
+  .allifrizzle {
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .allifrizzle {
+    width: 600px;
+    height: 420px;
+  }
+
+  .minnsec-one {
+    position: relative;
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
+
+@media only screen and (max-width: 705px) {
+  .allifrizzle {
+    width: 400px;
+    height: 420px;
+  }
+
+  .minnsec-one {
+    position: relative;
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .allifrizzle {
+    width: 100%;
+    height: 420px;
+  }
+
+  .minnsec-one {
+    position: relative;
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
 }
 
 .desc-container {
@@ -257,4 +432,31 @@ iframe {
   position: absolute;
   bottom: 22.75rem;
   margin: 0;
+}
+
+@media only screen and (max-width: 940px) {
+  .oneifrizzle {
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.116);
+    width: 600px;
+    height: 320px;
+  }
+}
+
+@media only screen and (max-width: 710px) {
+  .oneifrizzle {
+    width: 100%;
+    height: 320px;
+  }
+
+  .desc-container {
+    width: 100%;
+    text-align: justify;
+  }
+
+  .desc-para {
+    margin: 1rem;
+    padding: 1rem 0;
+  }
 }

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./StpMain.css";
-import LocationTitles from "./LocationTitles";
+import StpLocationsTitles from "./StpLocationsTitles";
 import Locations from "./Locations";
 import ContactBanner from "./ContactBanner";
 import stpdata from "./stpdata";
@@ -14,19 +14,31 @@ const StpMain = () => {
   const [locationList, setLocationList] = useState(stpdata);
   const [locations, setLocation] = useState(allLocations);
 
-  console.log();
+  const hideOnClickStp = () => {
+    document
+      .querySelector(".locations-container")
+      .classList.add("hidelocations");
+    setTimeout(() => {
+      document
+        .querySelector(".locations-container")
+        .classList.add("displayNada");
+    }, 400);
+  };
 
   const filterLocations = (location) => {
     if (location === "All") {
       document.querySelector(".minnsec-one").classList.remove("minnsec-all");
       setLocationList(stpdata);
+      hideOnClickStp();
       return;
+    } else {
+      document.querySelector(".minnsec-one").classList.add("minnsec-all");
+      const newItems = stpdata.filter(
+        (mdata) => mdata.locationtitle === location
+      );
+      setLocationList(newItems);
     }
-    document.querySelector(".minnsec-one").classList.add("minnsec-all");
-    const newItems = stpdata.filter(
-      (mdata) => mdata.locationtitle === location
-    );
-    setLocationList(newItems);
+    hideOnClickStp();
   };
   return (
     <main className="minnmain">
@@ -55,7 +67,10 @@ const StpMain = () => {
           </div>
         </div>
       </div>
-      <LocationTitles locations={locations} filterLocations={filterLocations} />
+      <StpLocationsTitles
+        locations={locations}
+        filterLocations={filterLocations}
+      />
       <section className="minnsec-one">
         <Locations items={locationList} />
       </section>
