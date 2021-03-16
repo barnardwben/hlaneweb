@@ -7,7 +7,8 @@ const MinnHeader = () => {
   const minnbgScroll = () => {
     if (
       window.location.href === "https://hlane.netlify.app/minneapolis" ||
-      window.location.href === "https://hlane.netlify.app/minneapolis/"
+      window.location.href === "https://hlane.netlify.app/minneapolis/" ||
+      window.location.href === "https://www.hlanerealtor.com/minneapolis"
     ) {
       if (window.scrollY > 500) {
         minnBgRef.current.classList.add("minnbgscroll");

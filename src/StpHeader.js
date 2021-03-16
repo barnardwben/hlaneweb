@@ -7,7 +7,8 @@ const StpHeader = () => {
   const minnbgScroll = () => {
     if (
       window.location.href === "https://hlane.netlify.app/st.paul" ||
-      window.location.href === "https://hlane.netlify.app/st.paul/"
+      window.location.href === "https://hlane.netlify.app/st.paul/" ||
+      window.location.href === "https://www.hlanerealtor.com/st.paul"
     ) {
       if (window.scrollY > 500) {
         minnBgRef.current.classList.add("minnbgscroll");

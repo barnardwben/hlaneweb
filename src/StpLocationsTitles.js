@@ -49,7 +49,8 @@ const StpLocationsTitles = ({ locations, filterLocations }) => {
   useEffect(() => {
     if (
       window.location.href === "https://hlane.netlify.app/st.paul" ||
-      window.location.href === "https://hlane.netlify.app/st.paul/"
+      window.location.href === "https://hlane.netlify.app/st.paul/" ||
+      window.location.href === "https://www.hlanerealtor.com/st.paul"
     ) {
       window.addEventListener("scroll", handleStpChange);
     }
@@ -74,7 +75,8 @@ const StpLocationsTitles = ({ locations, filterLocations }) => {
       >
         <div className="locations-selection">
           <span>
-            {window.location.href === "https://hlane.netlify.app/minneapolis"
+            {window.location.href === "https://hlane.netlify.app/minneapolis" ||
+            window.location.href === "https://www.hlanerealtor.com/minneapolis"
               ? "Minneapolis Districts"
               : "St. Paul Districts"}
           </span>

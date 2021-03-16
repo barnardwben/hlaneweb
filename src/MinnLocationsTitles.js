@@ -74,7 +74,8 @@ const MinnLocationsTitles = ({ locations, filterLocations }) => {
       >
         <div className="locations-selection">
           <span>
-            {window.location.href === "https://hlane.netlify.app/minneapolis"
+            {window.location.href === "https://hlane.netlify.app/minneapolis" ||
+            window.location.href === "https://www.hlanerealtor.com/minneapolis"
               ? "Minneapolis Districts"
               : "St. Paul Districts"}
           </span>

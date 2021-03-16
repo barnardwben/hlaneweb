@@ -94,7 +94,10 @@ const HomeMain = () => {
         pSixRef.current.classList.add("pscroll");
 
         setTimeout(() => {
-          if (window.location.href === "https://hlane.netlify.app/") {
+          if (
+            window.location.href === "https://hlane.netlify.app/" ||
+            window.location.href === "https://www.hlanerealtor.com/"
+          ) {
             pOneRef.current.classList.remove("hidePara");
             pTwoRef.current.classList.remove("hidePara");
             pThreeRef.current.classList.remove("hidePara");
