@@ -37,7 +37,10 @@ const HomeMain = () => {
   };
 
   const condoScroll = () => {
-    if (window.location.href === "https://hlane.netlify.app/") {
+    if (
+      window.location.href === "https://hlane.netlify.app/" ||
+      window.location.href === "https://www.hlanerealtor.com/"
+    ) {
       if (window.scrollY > 500) {
         condoPhotoOneRef.current.classList.add("condoscroll");
         condoPhotoTwoRef.current.classList.add("condoscroll");
