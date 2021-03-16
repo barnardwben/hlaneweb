@@ -5,7 +5,12 @@ const HomeHeader = () => {
   const homeHeaderRef = useRef(null);
 
   const headerScroll = () => {
-    if (window.location.href === "https://hlane.netlify.app/") {
+    if (
+      window.location.href === "https://hlane.netlify.app/" ||
+      window.location.href === "https://www.hlanerealtor.com/" ||
+      window.location.href === "hlanerealtor.com" ||
+      window.location.href === "www.hlanerealtor.com/"
+    ) {
       if (window.scrollY > 0) {
         document.querySelector(
           ".homeheader-bg"
