@@ -70,6 +70,12 @@ const AboutMain = () => {
             <p className="about-main-paras">
               Home Listing | Buyer Representation | Relocation
             </p>
+            <h2 className="about-heading-one">Education & Training</h2>
+            <p className="about-main-paras">
+              Augsburg College <br />
+              Bachelor of Science in Business Management <br /> Minor: Business
+              Marketing
+            </p>
             <h2 className="about-heading-one">Affiliations & Accreditations</h2>
             <p className="about-main-paras">
               Licensed Sales Agent – State of MN
