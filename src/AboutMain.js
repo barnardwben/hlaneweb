@@ -11,12 +11,13 @@ const AboutMain = () => {
       window.location.href === "www.hlanerealtor.com/about"
     ) {
       if (window.scrollY > document.querySelector("main").offsetHeight - 1020) {
-        console.log(document.querySelector("main").offsetHeight);
+        console.log(document.querySelector("main").offsetHeight, "running1");
         hannahImgRef.current.classList.add("stickthree");
       } else if (
         window.scrollY <
         document.querySelector("main").offsetHeight - 1020
       ) {
+        console.log("running2");
         hannahImgRef.current.classList.remove("stickthree");
       }
     }
