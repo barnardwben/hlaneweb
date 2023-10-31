@@ -7,7 +7,7 @@ const AboutMain = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY >= 400) {
+      if (window.scrollY >= 1000) {
         setIsPositionFixed(false);
       } else {
         setIsPositionFixed(true);
