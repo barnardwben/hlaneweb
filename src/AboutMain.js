@@ -14,13 +14,22 @@ const AboutMain = () => {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    // Check if the device is an iPad or larger
+    const isIpadOrLarger = window.innerWidth >= 768; // Minimum width for iPad in portrait mode
+
+    if (isIpadOrLarger) {
+      window.addEventListener("scroll", handleScroll);
+    }
 
     return () => {
       // Cleanup the event listener when the component unmounts
-      window.removeEventListener("scroll", handleScroll);
+      if (isIpadOrLarger) {
+        window.removeEventListener("scroll", handleScroll);
+      }
     };
   }, []);
+
+  const imagePosition = isPositionFixed ? "fixed" : "absolute";
 
   const imagePosition = isPositionFixed ? "fixed" : "absolute";
   return (
