@@ -1,42 +1,28 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import "./AboutMain.css";
 import ContactBanner from "./ContactBanner";
 const AboutMain = () => {
   const hannahImgRef = useRef(null);
-
-  const hannahScroll = () => {
-    if (
-      window.location.href === "https://hlane.netlify.app/about" ||
-      window.location.href === "http://www.hlanerealtor.com/about" ||
-      window.location.href === "www.hlanerealtor.com/about"
-    ) {
-      console.log("yes1", window.scrollY);
-      if (
-        window.scrollY >
-        document.querySelector(".about-main").offsetHeight - 1020
-      ) {
-        console.log(
-          document.querySelector(".about-main").offsetHeight,
-          "running1"
-        );
-        hannahImgRef.current.classList.add("stickthree");
-      } else if (
-        window.scrollY <
-        document.querySelector(".about-main").offsetHeight - 1020
-      ) {
-        console.log("running2");
-        hannahImgRef.current.classList.remove("stickthree");
-      }
-    }
-  };
+  const [isPositionFixed, setIsPositionFixed] = useState(true);
 
   useEffect(() => {
-    window.addEventListener("scroll", hannahScroll);
+    const handleScroll = () => {
+      if (window.scrollY >= 400) {
+        setIsPositionFixed(false);
+      } else {
+        setIsPositionFixed(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
     return () => {
-      window.removeEventListener("scroll", hannahScroll);
+      // Cleanup the event listener when the component unmounts
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
+  const imagePosition = isPositionFixed ? "fixed" : "absolute";
   return (
     <>
       <main className="about-main">
@@ -101,6 +87,7 @@ const AboutMain = () => {
                 alt="Hannah Lane Realtor"
                 className="abouthan"
                 ref={hannahImgRef}
+                style={{ position: imagePosition }}
               />
             </div>
             <div className="right-right">
