@@ -42,7 +42,7 @@ const HomeHeader = () => {
             <p className="header-para">Twin Cities Realtor®</p>
           </div>
           <img
-            src="hannahimages\comphanaone.png"
+            src="hannahimages\homehannah.png"
             alt="Hannah Lane Realtor"
             className="cutimagehannah"
           />
