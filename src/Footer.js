@@ -9,11 +9,11 @@ const Footer = () => {
         <div className="footer-top-layer">
           <div className="footer-grid-container">
             <div className="footer-left-grid">
-              <img
-                src="https://lh3.googleusercontent.com/-Itx1TEcBEPA/AAAAAAAAAAI/AAAAAAAAAAA/80bXmXLSNeo/s55-w44-h44-p-k-no-ns-nd/photo.jpg"
+              {/* <img
+                src="https://www.mplsrealtor.com/wp-content/themes/maar/images/logo.png"
                 alt="Minneapolis Area Realtors Logo"
                 className="MARL"
-              />
+              /> */}
               <img
                 src="https://www.nar.realtor/sites/all/themes/gesso/images/nar-logo-2020.svg"
                 alt="National Association of Realtors Logo"
