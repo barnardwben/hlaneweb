@@ -10,12 +10,19 @@ const AboutMain = () => {
       window.location.href === "http://www.hlanerealtor.com/about" ||
       window.location.href === "www.hlanerealtor.com/about"
     ) {
-      if (window.scrollY > document.querySelector("main").offsetHeight - 1020) {
-        console.log(document.querySelector("main").offsetHeight, "running1");
+      console.log("yes1");
+      if (
+        window.scrollY >
+        document.querySelector(".about-main").offsetHeight - 1020
+      ) {
+        console.log(
+          document.querySelector(".about-main").offsetHeight,
+          "running1"
+        );
         hannahImgRef.current.classList.add("stickthree");
       } else if (
         window.scrollY <
-        document.querySelector("main").offsetHeight - 1020
+        document.querySelector(".about-main").offsetHeight - 1020
       ) {
         console.log("running2");
         hannahImgRef.current.classList.remove("stickthree");
