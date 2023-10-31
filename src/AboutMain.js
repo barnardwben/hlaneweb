@@ -1,41 +1,26 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect} from "react";
 import "./AboutMain.css";
 import ContactBanner from "./ContactBanner";
 const AboutMain = () => {
   const hannahImgRef = useRef(null);
 
-  const hannahScroll = () => {
-    if (
-      window.location.href === "https://hlane.netlify.app/about" ||
-      window.location.href === "http://www.hlanerealtor.com/about" ||
-      window.location.href === "www.hlanerealtor.com/about"
-    ) {
-      console.log("yes1", window.scrollY);
-      if (
-        window.scrollY >
-        document.querySelector(".about-main").offsetHeight - 1020
-      ) {
-        console.log(
-          document.querySelector(".about-main").offsetHeight,
-          "running1"
-        );
-        hannahImgRef.current.classList.add("stickthree");
-      } else if (
-        window.scrollY <
-        document.querySelector(".about-main").offsetHeight - 1020
-      ) {
-        console.log("running2");
-        hannahImgRef.current.classList.remove("stickthree");
-      }
-    }
-  };
-
+ function ScrollPositionTracker() {
   useEffect(() => {
-    window.addEventListener("scroll", hannahScroll);
-    return () => {
-      window.removeEventListener("scroll", hannahScroll);
+    // Function to log scroll position to the console
+    const logScrollPosition = () => {
+      const scrollY = window.scrollY;
+      console.log('Scroll position on the y-axis:', scrollY);
     };
-  }, []);
+
+    // Attach the event listener
+    window.addEventListener('scroll', logScrollPosition);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('scroll', logScrollPosition);
+    };
+  }, []); // Empty dependency array to run the effect only once
+
 
   return (
     <>
