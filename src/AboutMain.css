@@ -161,7 +161,7 @@
 
   .abouthan {
     width: 335px;
-    position: absolute;
+    position: absolute !important;
     right: 0rem;
     bottom: 0rem;
     transition: 0.3s all ease-in-out;
