@@ -59,7 +59,7 @@
 }
 
 .abouthan {
-  width: 525px;
+  width: 50%;
   position: fixed;
   right: 0rem;
   bottom: 0;
@@ -89,7 +89,8 @@
 
 @media only screen and (max-width: 975px) {
   .abouthan {
-    width: 405px;
+    width: 500px;
+    right: -15%;
   }
 }
 
