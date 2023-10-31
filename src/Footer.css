@@ -133,6 +133,11 @@ footer {
 }
 
 @media only screen and (max-width: 631px) {
+  .footer-top-layer {
+    background: rgba(139, 156, 116, 0.575);
+    height: 175px;
+  }
+
   .footer-grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
