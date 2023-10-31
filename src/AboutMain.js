@@ -30,8 +30,6 @@ const AboutMain = () => {
   }, []);
 
   const imagePosition = isPositionFixed ? "fixed" : "absolute";
-
-  const imagePosition = isPositionFixed ? "fixed" : "absolute";
   return (
     <>
       <main className="about-main">
