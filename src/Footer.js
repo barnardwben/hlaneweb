@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="footer-grid-container">
             <div className="footer-left-grid">
               <img
-                src="https://www.mplsrealtor.com/wp-content/themes/maar/images/logo.png"
+                src="https://lh3.googleusercontent.com/-Itx1TEcBEPA/AAAAAAAAAAI/AAAAAAAAAAA/80bXmXLSNeo/s55-w44-h44-p-k-no-ns-nd/photo.jpg"
                 alt="Minneapolis Area Realtors Logo"
                 className="MARL"
               />
