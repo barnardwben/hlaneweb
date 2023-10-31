@@ -28,6 +28,7 @@
 .header-text-container {
   font-style: normal;
   position: relative;
+  z-index: 999;
   top: -1rem;
   color: #fceff9;
   text-align: center;
@@ -67,9 +68,11 @@
 
 .cutimagehannah {
   position: absolute;
-  bottom: 0;
+  bottom: -5px;
   width: 650px;
-  width: 45%;
+  width: 25%;
+  left: 2rem;
+  max-width: 500px;
   transition: 0.3s all ease-in-out;
 }
 
