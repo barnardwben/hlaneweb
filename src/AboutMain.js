@@ -10,7 +10,7 @@ const AboutMain = () => {
       window.location.href === "http://www.hlanerealtor.com/about" ||
       window.location.href === "www.hlanerealtor.com/about"
     ) {
-      console.log("yes1");
+      console.log("yes1", window.scrollY);
       if (
         window.scrollY >
         document.querySelector(".about-main").offsetHeight - 1020
