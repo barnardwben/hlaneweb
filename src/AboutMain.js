@@ -31,9 +31,9 @@ const AboutMain = () => {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", hannahScroll());
+    window.addEventListener("scroll", hannahScroll);
     return () => {
-      window.removeEventListener("scroll", hannahScroll());
+      window.removeEventListener("scroll", hannahScroll);
     };
   }, []);
 
